@@ -49,11 +49,12 @@ header
         align-items: center
         justify-content: center
         border-radius: 1000px
+        z-index: 999
         +toREM(20)
         @include break-768
           display: flex
       ul.responsive
-        position: absolute
+        position: fixed
         z-index: 999
         background: $secColor
         color: white
@@ -145,8 +146,10 @@ header
         +itoREM(40)
 
 .gradient-wrapper
-  padding: 80px
+  padding: 80px 20px
   background: linear-gradient(0deg, #130D36, #7E649F)
+  @include break-768
+    padding: 40px 20px
 
 .main-paragraph
   +toREM(26)
@@ -227,6 +230,7 @@ header
       border-bottom: solid 5px white
       padding-right: 0px
       padding-bottom: 15px
+      text-align: left
     h2
       +toREM(40)
       @include break-1199
@@ -252,6 +256,12 @@ header
 footer
   padding: 80px 0
   background: black
+  aside
+    &:last-child
+      @include break-991
+        margin-top: 20px
+        label
+          margin-top: 15px
   @include break-991
     text-align: center
     padding: 40px 0

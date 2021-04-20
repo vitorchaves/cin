@@ -160,7 +160,7 @@ foreach ($banners as $banner) {
           </aside>
 
           <aside class="col-lg-5 offset-lg-1">
-            <h3 class="text-white">A poucos metros do Metrô Santa Cruz.</h3>
+            <h3 class="text-white">Envie sua mensagem</h3>
             <form action="#" method="get" class="mt-2">
               <div class="form-group">
                 <label for="nome">Seu nome*</label>
@@ -183,7 +183,7 @@ foreach ($banners as $banner) {
         </div>
       </div>
 
-      <p class="text-white text-center mt-4">Cinetica.ag - 2020@Vítor_Chaves</p>
+      <p class="text-white text-center mt-5">Cinetica.ag - 2020@Vítor_Chaves</p>
     </footer>
 
 
