@@ -1,0 +1,61 @@
+body,.full-banner
+  overflow-x: hidden!important
+  width: 100%
+
+  //VARS
+$mainColor: #76ACA9
+$secColor: #3B5B5A
+
+// CONVERT FUNC  
+=toREM($v)
+  font-size: ($v/16)+em
+=itoREM($v)
+  font-size: ($v/16)+em!important
+
+*
+  padding: 0
+  margin: 0
+
+.bg-mainColor
+  background-color: $mainColor
+.bg-secColor
+  background-color: $secColor
+
+.text-white
+  color: white
+
+.--no-link-style
+  color: inherit!important
+  text-decoration: none!important
+
+h1,h2,h3,h4,h5,h6
+  font-family: 'bm'
+  font-weight: normal
+p,ul,li,a,div,section,article,ol
+  font-family: 'br'
+
+.text-center
+  text-align: center
+
+.my-80
+  margin-top: 80px
+  margin-bottom: 80px
+  @include break-1199
+    margin-top: 40px
+    margin-bottom: 40px
+
+.force-center
+  margin: 0 auto
+
+.mt-40
+  margin-top: 40px
+
+.img-fluid
+  width: 100%
+  max-width: fit-content
+
+// SLICK BUG FIX
+.slick-track
+  display: flex
+  *
+    outline: none

@@ -1,0 +1,292 @@
+header
+  & > div:nth-child(1)
+    .container
+      padding: 40px 15px 10px
+      @include break-768
+        padding: 20px 15px
+      .row
+        justify-content: space-between
+        align-items: flex-end
+        h1
+          +toREM(80)
+          font-family: 'bm'
+          font-weight: normal
+          @include break-1199
+            +itoREM(50)
+          @include break-768
+            +itoREM(30)
+        .social-group
+          margin-bottom: 10px
+          @include break-768
+            margin-bottom: 3px
+
+          a
+            margin: 0 10px
+            transition: all ease .3s
+            &:last-child
+              margin-right: 0
+            &:hover
+              opacity: .8
+            i
+              +toREM(50)
+              color: white
+              @include break-1199
+                +itoREM(30)
+              @include break-768
+                +itoREM(18)
+  & > div:nth-child(2)
+    menu
+      i.floating-icon
+        display: none
+        position: fixed
+        box-shadow: 0 0 3px 3px #00000020
+        right: 15px
+        bottom: 15px
+        background: white
+        color: $mainColor
+        height: 50px
+        width: 50px
+        align-items: center
+        justify-content: center
+        border-radius: 1000px
+        +toREM(20)
+        @include break-768
+          display: flex
+      ul.responsive
+        position: absolute
+        z-index: 999
+        background: $secColor
+        color: white
+        width: 100%
+        left: 0
+        top: 0
+        padding: 30px
+        li
+          list-style: none
+          +toREM(20)
+          line-height: 30px
+        @include break-768
+          display: block
+      ul:not(.responsive)
+        display: flex
+        justify-content: space-between
+        width: 100%
+        @include break-768
+          display: none
+        li
+          transition: all ease .3s
+          display: inline-block
+          color: white
+          +toREM(18)
+          @include break-1199
+            +itoREM(15)
+          &:hover
+            opacity: .8
+          a
+            padding: 20px 0
+            display: block
+          &:last-child
+            background: #C4C4C4
+            text-align: center
+            color: #3B5B5A
+            width: 250px
+            &:hover
+              background: #9b9b9b
+
+.full-banner
+  height: 630px
+  cursor: pointer
+  position: relative
+  @include break-768
+    height: 330px
+  &:hover
+    .navigation
+      opacity: .6
+  .navigation
+    position: absolute
+    +toREM(100)
+    color: white
+    z-index: 99
+    opacity: .2
+    transition: opacity ease .4s
+    top: 50%
+    transform: translateY(-50%)
+    @include break-768
+      transform: translateY(-80%)
+      +toREM(50)
+    &:hover
+      opacity: 1
+    &.nav-left
+      left: 20px
+    &.nav-right
+      right: 20px
+  &:active
+    cursor: grabbing
+  .item
+    height: 630px
+    background-position: center!important
+    background-size: cover!important
+    position: relative
+    @include break-768
+      height: 330px
+    h2
+      position: absolute
+      bottom: 70px
+      background: rgba(118, 172, 169, 0.75)
+      +toREM(120)
+      text-shadow: 0 4px 3px black
+      color: white
+      padding: 15px 30px
+      padding-left: 25vw
+      text-transform: uppercase
+      @include break-1199
+        +itoREM(80)
+      @include break-768
+        +itoREM(40)
+
+.gradient-wrapper
+  padding: 80px
+  background: linear-gradient(0deg, #130D36, #7E649F)
+
+.main-paragraph
+  +toREM(26)
+  color: white
+  @include break-1199
+    +itoREM(20)
+.my-btn
+  display: block
+  background-color: $mainColor
+  color: white
+  +toREM(30)
+  padding: 15px 80px
+  text-decoration: none
+  font-family: 'bm'
+  text-transform: uppercase
+  border-radius: 10px
+  box-shadow: 0 3px 2px 3px #03030327
+  transition: all ease .3s
+  @include break-1199
+    +itoREM(22)
+  &:hover
+    padding: 15px 105px
+
+.profiles
+  & > div
+    transition: all ease .4s
+    padding: 40px
+    @include break-768
+      padding: 40px 0!important
+    &:hover
+      background: #ffffff0e
+      -webkit-backdrop-filter: blur(10px)
+      border-radius: 15px
+
+  img
+    border-radius: 1000px
+    width: 100%
+    max-width: fit-content
+    height: auto
+  p.group
+    +toREM(22)
+    @include break-1199
+      +itoREM(16)
+  h4
+    +toREM(32)
+    font-family: 'bb'
+    @include break-1199
+      +itoREM(24)
+  h5
+    +toREM(24)
+    @include break-1199
+      +itoREM(20)
+  p
+    +toREM(20)
+    @include break-1199
+      +itoREM(16)
+
+.your-profile
+  h2
+    +toREM(60)
+    @include break-1199
+      +itoREM(40)
+    &.--bold
+      font-family: 'bb'
+
+.two-columns
+  margin-bottom: 0
+  & > div > div:first-child
+    margin-bottom: 60px
+  .border-right
+    text-align: right
+    padding-right: 30px
+    border-right: solid 5px white
+    display: flex
+    align-items: center
+    @include break-768
+      border-right: none
+      border-bottom: solid 5px white
+      padding-right: 0px
+      padding-bottom: 15px
+    h2
+      +toREM(40)
+      @include break-1199
+        +itoREM(30)
+      @include break-991
+        +itoREM(24)
+    & + div
+      height: 220px
+      display: flex
+      align-items: center
+      +toREM(22)
+      padding-left: 30px
+      @include break-1199
+        +itoREM(18)
+        height: 190px
+      @include break-991
+        +itoREM(16)
+        height: 150px
+      @include break-768
+        height: auto
+        padding: 20px 0
+
+footer
+  padding: 80px 0
+  background: black
+  @include break-991
+    text-align: center
+    padding: 40px 0
+  img
+    width: 100%
+    max-width: fit-content
+    height: auto
+  h3
+    font-family: 'br'
+  form
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 90%
+    transform: translateY(10px)
+    label
+      display: block
+      color: #fff
+      margin-bottom: 5px
+    input
+      padding: 11px 15px
+      border-radius: 7px
+      background-color: #C4C4C4
+      outline: none!important
+      width: 100%
+      font-family: 'bm'
+      +toREM(16)
+      &::placeholder
+        color: #818181
+      &[type='submit']
+        margin-top: 20px
+        width: fit-content
+        padding: 11px 40px
+        align-self: flex-end
+        font-family: 'bb'
+        +toREM(16)
+        cursor: pointer
